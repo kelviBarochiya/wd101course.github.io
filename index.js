@@ -61,6 +61,8 @@ if(age < 18 || age > 55){
         dob,
         acceptTerms
      }
+    const submit = document.getElementById("submit");
+      submit.addEventListener("click", () => validate(email));
     
     const dateText = document.getElementById("dob");
       dateText.min = new Date(minDateText).toLocaleDateString("en-ca");
