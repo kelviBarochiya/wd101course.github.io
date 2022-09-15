@@ -61,6 +61,10 @@ if(age < 18 || age > 55){
         dob,
         acceptTerms
      }
+    
+    const dateText = document.getElementById("dob");
+      dateText.min = new Date(minDateText).toLocaleDateString("en-ca");
+      dateText.max = new Date(maxDateText).toLocaleDateString("en-ca");
      userEntries=retieveEntries();
      userEntries.push(entry);
      localStorage.setItem("userEntries",JSON.stringify(userEntries));
