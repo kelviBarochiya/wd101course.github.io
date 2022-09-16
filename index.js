@@ -61,12 +61,12 @@ if(age < 18 || age > 55){
         dob,
         acceptTerms
      }
-    const submit = document.getElementById("submit");
-      submit.addEventListener("click", () => validate(email));
-    
-    const dateText = document.getElementById("dob");
-      dateText.min = new Date(minDateText).toLocaleDateString("en-ca");
-      dateText.max = new Date(maxDateText).toLocaleDateString("en-ca");
+
+     if(age < 18 || age > 55){
+        document.getElementById('dob');
+     return alert("age must be between 18 and 55")
+     }
+      
      userEntries=retieveEntries();
      userEntries.push(entry);
      localStorage.setItem("userEntries",JSON.stringify(userEntries));
